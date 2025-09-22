@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Realidad Aumentada con GLB</title>
-  <!-- Importar model-viewer -->
+  <title>Realidad Aumentada con Pasta</title>
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
   <style>
     body {
@@ -20,35 +19,19 @@
       height: 100%;
       background-color: transparent;
     }
-    .ar-button {
-      position: absolute;
-      bottom: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      padding: 10px 20px;
-      background-color: #6200ea;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 16px;
-    }
   </style>
 </head>
 <body>
   <model-viewer
-    src="pasta.glb"
-    alt="Modelo 3D en AR"
+    src="models/pasta.glb"  <!-- Ajusta esta ruta según tu estructura -->
+    alt="Modelo 3D de pasta en AR"
     ar
     ar-modes="webxr scene-viewer quick-look"
     camera-controls
     auto-rotate
     shadow-intensity="1"
     environment-image="neutral"
-    
   >
-    <!-- Botón personalizado para activar AR -->
-    <button class="ar-button" slot="ar-button">Ver en Realidad Aumentada</button>
   </model-viewer>
 </body>
 </html>
